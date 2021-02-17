@@ -105,6 +105,14 @@ def calcula_erros(texto):
             if k.isdigit():
                 palavras_erradas.remove(k)
         resolver -= 1
+    resolver = (math.sqrt(len(palavras_erradas)) // 1)
+    while resolver >= 1:
+        for j in palavras_erradas:
+            aux = j.lower()
+            busca2 = Busca_binaria(dicio, aux)
+            if busca2 != False:
+                palavras_erradas.remove(j)
+        resolver -= 1                                      # 
     if len(palavras_erradas) == 0:
         return 'Sem erros'
     return palavras_erradas
@@ -138,7 +146,7 @@ import palavras
 vogais = ['A','E','I','O','U','a','e','i','o','u']
 caracteres = ['-','_','"',"'",'^','~', '=', '+', ';', ':',',','.','?','/']
 dicio = palavras.dicio()
-dicio = separa_palavras(dicio) # total de palavras em português - 261798
+dicio = separa_palavras(dicio) # total de palavras em português - 261800
 print("----------Criador - Victor Emanuel Sousa Lima-------------")
 print("-------Ultima modificação - 01/02/2021 por Victor Emanuel-------")
 print(" ")

@@ -679,6 +679,7 @@ Satanás
 Sativa
 Satã
 Saudita
+Se
 Senegal
 Sergipe
 Setúbal
